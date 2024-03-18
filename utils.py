@@ -14,7 +14,8 @@ def generate_random_object_id():
 def create_jira_issue(summary, description):
     # Create JIRA issue with relevant information
     private_config = read_private_config()
-    token = private_config['token']
+    temp_token = private_config['token']
+    token = temp_token[4:]
     email = private_config['email']
     jira_url = private_config['jira_url']
     project_token = private_config['project_token']
