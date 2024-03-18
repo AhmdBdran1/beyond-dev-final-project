@@ -9,8 +9,6 @@ import concurrent.futures
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from utils import read_private_config
-
 
 def read_config(file_path):  # open the config file for read
     script_directory = os.path.dirname(os.path.realpath(__file__))
@@ -23,7 +21,6 @@ def read_config(file_path):  # open the config file for read
 class BrowserWrapper:
     def __init__(self):
         self.driver = None
-
 
     def get_driver(self, option):  # create driver based on config content
         config_file = '../config.json'
