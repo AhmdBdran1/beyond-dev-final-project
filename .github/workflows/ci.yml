@@ -55,10 +55,11 @@ jobs:
       - name: Send Slack notification
         uses: rtCamp/action-slack-notify@v3
         env:
-            SLACK_CHANNEL: final-project
-            SLACK_MESSAGE: "New push detected! Build successful."
+          SLACK_CHANNEL: final-project
+          SLACK_MESSAGE: "New push detected! Build successful."
         with:
-            status: ${{ job.status }}
-            mentions: "<!here>"
+          status: ${{ job.status }}
+          mentions: "<!here>"
         if: always()
+
 
