@@ -42,7 +42,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest tests_runner/api_test_runner.py --html=report.html
+          pytest tests_runner/api_test_runner.py --html=test-results.html
 
       - name: Upload test results
         uses: actions/upload-artifact@v2
