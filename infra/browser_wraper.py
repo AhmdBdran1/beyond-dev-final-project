@@ -51,7 +51,7 @@ class BrowserWrapper:
             driver.maximize_window()
             return driver
 
-    def test_run_grid_serial(self, test_execute):  # run the test with serial process
+    def test_run_grid_serial(self, test_execute):  # run the test with serial processs
         cap_list = self.get_capabilities_list()
         for caps in cap_list:
             test_execute(caps)
