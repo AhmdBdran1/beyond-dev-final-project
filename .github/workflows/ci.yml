@@ -42,7 +42,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest tests_runner/ui_test_runner.py --html=test-results.html
+          pytest tests_runner/api_test_runner.py --html=test-results.html
         
     
 
@@ -51,4 +51,14 @@ jobs:
         with:
           name: Test Results
           path: test-results.html
+
+      - name: Send Slack notification
+        uses: rtCamp/action-slack-notify@v3
+        env:
+            SLACK_CHANNEL: final-project
+            SLACK_MESSAGE: "New push detected! Build successful."
+        with:
+            status: ${{ job.status }}
+            mentions: "<!here>"
+        if: always()
 
