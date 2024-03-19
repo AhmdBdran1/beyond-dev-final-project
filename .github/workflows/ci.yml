@@ -42,7 +42,7 @@ jobs:
 
       - name: Run tests
         run: |
-          python tests_runner/ui_test_runner.py 
+          pytest tests_runner/ui_test_runner.py --html=test-results.html
         
     
 
