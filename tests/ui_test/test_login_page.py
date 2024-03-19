@@ -38,13 +38,6 @@ class LoginPageTests(unittest.TestCase):
         driver.quit()
         self.assertEqual(name, "Aahmd Bdran")
 
-    def test_specific_test(self):
-        self.browser_wrapper.run_test(self.test_login)  # select the specific function you want to run
-
-    def test_all_tests(self):  # run all tests
-        tests_list = [self.test_login]
-        for test in tests_list:
-            self.browser_wrapper.run_test(test)
 
 
 if __name__ == "__main__":
