@@ -2,3 +2,4 @@ selenium~=4.17.2
 requests~=2.31.0
 jira~=3.6.0
 pytest-html
+pytest
