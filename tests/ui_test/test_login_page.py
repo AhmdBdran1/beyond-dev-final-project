@@ -1,5 +1,7 @@
 import unittest
+
 from selenium import webdriver
+
 from infra.browser_wraper import BrowserWrapper
 from logic.UI_logic.home_page import HomePage
 from logic.UI_logic.login_page import LoginPage
