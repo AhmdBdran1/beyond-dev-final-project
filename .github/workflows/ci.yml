@@ -52,11 +52,5 @@ jobs:
           name: Test Results
           path: test-results.html
 
-      - name: Send Slack Notification
-        uses: "slack/webhook-action@v2"
-        with:
-            slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
-            text: "Tests have finished running. Check the results!"
-            channel: "#final-project"
 
 
