@@ -42,7 +42,8 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest tests/ui_test/test_login_page.py --html=test-results.html
+          python tests/ui_test/test_login_page.py 
+          
         
     
 
