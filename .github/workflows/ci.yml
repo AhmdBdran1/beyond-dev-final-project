@@ -52,14 +52,11 @@ jobs:
           name: Test Results
           path: test-results.html
 
-      - name: Send Slack notification
-        uses: rtCamp/action-slack-notify@v3
-        env:
-          SLACK_CHANNEL: final-project
-          SLACK_MESSAGE: "New push detected! Build successful."
+      - name: Send Slack Notification
+        uses: "slack/webhook-action@v2"
         with:
-          status: ${{ job.status }}
-          mentions: "<!here>"
-        if: always()
+            slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+            text: "Tests have finished running. Check the results!"
+            channel: "#final-project"
 
 
