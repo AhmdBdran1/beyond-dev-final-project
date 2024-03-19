@@ -39,6 +39,5 @@ class LoginPageTests(unittest.TestCase):
         self.assertEqual(name, "Aahmd Bdran")
 
 
-
 if __name__ == "__main__":
     unittest.main()
