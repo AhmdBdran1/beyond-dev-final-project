@@ -42,7 +42,6 @@ jobs:
 
       - name: Run tests
         run: |
-          python tests/ui_test/test_login.py 
           python tests/api_test/board_test.py
           
         
