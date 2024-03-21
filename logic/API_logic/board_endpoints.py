@@ -6,7 +6,7 @@ from utils import read_from_secret_file
 class BoardEndPoints:
     config = read_from_secret_file()
     token = config['website_token']
-    api_key= config['api_key']
+    api_key= config['api_token']
     # Constants for Trello API
     BASE_URL = 'https://api.trello.com/1'
     CREATE_BOARD_URL = f'{BASE_URL}/boards/'
