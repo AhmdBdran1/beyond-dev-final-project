@@ -27,8 +27,8 @@ class BrowserWrapper:
         config = read_config(config_file)
         grid = config['grid']
         hub_url = config['hub_url']
-        url = config['url']
-        option.add_argument('--headless')  # This line makes Chrome run in headless mode
+        url = 'https://trello.com/login'
+        #option.add_argument('--headless')  # This line makes Chrome run in headless mode
         option.add_argument('--no--sandbox')
         option.add_argument('--disable-dev-shm-usage')
         option.add_argument('--window-size=1920x1080')
