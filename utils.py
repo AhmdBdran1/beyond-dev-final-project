@@ -48,6 +48,7 @@ def read_private_config():  # open the config file for read
     absolute_path = os.path.join(script_directory, "private_config.json")
     with open(absolute_path, 'r') as f:
         config = json.load(f)
+        print(config)
     return config
 
 
