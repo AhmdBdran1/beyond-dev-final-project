@@ -25,7 +25,7 @@ class LoginPageTests(unittest.TestCase):
                     error_message += f"Error: {traceback_text}\n"
                 create_jira_issue(f"{test_method_name} Test Failed", error_message)
 
-    def test_login(self, option=webdriver.ChromeOptions()):  # test the login process
+    def test_login(self, option=webdriver.ChromeOptions()):  # test the login processs
         driver = self.browser_wrapper.get_driver(option)
         login_page = Login(driver)
         self.assertTrue(login_page.login())

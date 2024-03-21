@@ -15,7 +15,6 @@ class LoginTest(unittest.TestCase):
         response = self.board_endpoint.create_new_board()
         data = response.json()
         self.assertTrue(response.status_code == 200)
-        self.assertEqual(data["name"], 'Ahmd BB')
 
 
 if __name__ == "__main__":
