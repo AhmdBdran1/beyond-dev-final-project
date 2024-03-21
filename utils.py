@@ -51,6 +51,14 @@ def read_private_config():  # open the config file for read
     return config
 
 
+def read_from_secret_file():
+    script_directory = os.path.dirname(os.path.realpath(__file__))
+    absolute_path = os.path.join(script_directory, "private_config.json")
+    with open(absolute_path, 'r') as f:
+        config = json.load(f)
+    return config
+
+
 # Function to generate random latitude and longitude within a specified range
 def generate_random_coordinates():
     latitude = round(random.uniform(-90, 90), 4)

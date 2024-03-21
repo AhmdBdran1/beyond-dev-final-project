@@ -6,9 +6,6 @@ from selenium import webdriver
 import os
 import concurrent.futures
 
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
 
 def read_config(file_path):  # open the config file for read
     script_directory = os.path.dirname(os.path.realpath(__file__))
@@ -34,20 +31,15 @@ class BrowserWrapper:
         option.add_argument('--window-size=1920x1080')
 
         if grid:
-            print('ala ala')
             print(option.to_capabilities())
             driver = webdriver.Remote(command_executor=hub_url, options=option)
             driver.get(url)
             # Wait until the title changes from "Just a moment..."
-            print(f"{driver.title} hada hoo")
             driver.maximize_window()
             return driver
         else:
-            print('bla bla')
             driver = webdriver.Chrome(option)
             driver.get(url)
-            print(f"{driver.title} hada hoo")
-
             driver.maximize_window()
             return driver
 
