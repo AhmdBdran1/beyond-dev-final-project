@@ -1,7 +1,4 @@
 import json
-from time import sleep
-
-from jira import JIRA
 from selenium import webdriver
 import os
 import concurrent.futures
